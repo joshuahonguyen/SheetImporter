@@ -1,0 +1,14 @@
+name: SpreadsheetImporter
+version: 1.0
+description: Imports spreadsheets
+author: uziza
+
+main: user.uziza.SheetImporter.SheetImporter
+
+commands:
+  import:
+    usage: /import (FileName)
+    description: import
+  char:
+    usage: /char (Character)
+    description: load char
