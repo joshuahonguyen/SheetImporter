@@ -12,3 +12,6 @@ commands:
   char:
     usage: /char (Character)
     description: load char
+  desc:
+     usage: /desc "Perk" type
+     description: reads desc

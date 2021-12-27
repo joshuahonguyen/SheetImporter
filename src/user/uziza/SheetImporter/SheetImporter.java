@@ -16,6 +16,7 @@ public class SheetImporter extends JavaPlugin implements Listener {
 	public void onEnable() {
 		this.getCommand(SSICommands.imp).setExecutor(SSICommands);
 		this.getCommand(SSICommands.chr).setExecutor(SSICommands);
+		this.getCommand(SSICommands.desc).setExecutor(SSICommands);
 		getServer().getPluginManager().registerEvents(new CharBook(this), this);
 		File spreadsheets = new File(this.getDataFolder() + "/Spreadsheets");
 		spreadsheets.mkdirs();
