@@ -1,6 +1,7 @@
 package user.uziza.SheetImporter;
 
 import java.io.File;
+import java.io.IOException;
 import java.util.HashSet;
 import java.util.Set;
 import java.util.UUID;
@@ -14,12 +15,17 @@ public class SheetImporter extends JavaPlugin implements Listener {
 	private SheetImporterCommands SSICommands = new SheetImporterCommands(this); 
 	@Override
 	public void onEnable() {
+		Boolean spreadsheets = new File(this.getDataFolder() + "/Spreadsheets").mkdirs();
+		Boolean spellcasting = new File(this.getDataFolder() + "/Info/Spellcasting").mkdirs();
 		this.getCommand(SSICommands.imp).setExecutor(SSICommands);
-		this.getCommand(SSICommands.chr).setExecutor(SSICommands);
+		this.getCommand(SSICommands.sh).setExecutor(SSICommands);
 		this.getCommand(SSICommands.desc).setExecutor(SSICommands);
+		this.getCommand(SSICommands.dl).setExecutor(SSICommands);
+		this.getCommand(SSICommands.asn).setExecutor(SSICommands);
+		getServer().dispatchCommand(getServer().getConsoleSender(), "import");
 		getServer().getPluginManager().registerEvents(new CharBook(this), this);
-		File spreadsheets = new File(this.getDataFolder() + "/Spreadsheets");
-		spreadsheets.mkdirs();
+		
+		
 	}
 	
 	@Override

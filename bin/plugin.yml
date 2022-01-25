@@ -9,9 +9,15 @@ commands:
   import:
     usage: /import (FileName)
     description: import
-  char:
-    usage: /char (Character)
-    description: load char
+  sheet:
+    usage: /sheet *(list, give)
+    description: 
   desc:
      usage: /desc "Perk" type
      description: reads desc
+  dl:
+     usage: /dl
+     description: downloads all required files
+  assign:
+     usage: /assign (player) (character name)
+     description: assigns player to character
