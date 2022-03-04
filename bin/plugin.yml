@@ -1,0 +1,23 @@
+name: SpreadsheetImporter
+version: 1.0
+description: Imports spreadsheets
+author: uziza
+
+main: user.uziza.SheetImporter.Main
+
+commands:
+  import:
+    usage: /import (FileName)
+    description: import
+  sheet:
+    usage: /sheet *(list, give)
+    description: 
+  desc:
+     usage: /desc "Perk" type
+     description: reads desc
+  dl:
+     usage: /dl
+     description: downloads all required files
+  assign:
+     usage: /assign (player) (character name)
+     description: assigns player to character
